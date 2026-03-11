@@ -4,7 +4,7 @@ terraform {
       source = "hashicorp/azurerm"
     }
     azurenoopsutils = {
-      source = "azurenoops/azurenoopsutils"
+      source = "POps-Rox/azurenoopsutils"
     }
   }
 }
