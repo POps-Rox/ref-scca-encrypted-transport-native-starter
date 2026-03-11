@@ -3,7 +3,6 @@
 ###############################
 module "dmz_keyvault" {
   source  = "github.com/POps-Rox/tf-az-overlays-keyvault"
-  version = "~> 1.0"
 
   depends_on = [
     azurerm_private_dns_zone.dns_zone,
