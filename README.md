@@ -13,7 +13,7 @@
 
 ## Overview
 
-This reference implementation was created to provide VPN services to people using the [Azure NoOps Reference SCCA Enclave Landing Zone Starter ](https://github.com/azurenoops/ref-scca-enclave-landing-zone-starter) or a similar SCCA-compliant landing zone, such as the [Mission Landing Zone](https://github.com/Azure/missionlz).  The intent is to make it easy to add VPN services to an existing SCCA-compliant enclave.  This starter is not intended to be used as a standalone VPN solution as it requires an SCCA-compliant Hub (VNet, Firewall, & Log Analytics Workspace) to be deployed first so that it can peer to the Hub virtual network and push logs to the Log Analytics Workspace.
+This reference implementation was created to provide VPN services to people using the [Azure NoOps Reference SCCA Enclave Landing Zone Starter ](https://github.com/POps-Rox/ref-scca-enclave-landing-zone-starter) or a similar SCCA-compliant landing zone, such as the [Mission Landing Zone](https://github.com/Azure/missionlz).  The intent is to make it easy to add VPN services to an existing SCCA-compliant enclave.  This starter is not intended to be used as a standalone VPN solution as it requires an SCCA-compliant Hub (VNet, Firewall, & Log Analytics Workspace) to be deployed first so that it can peer to the Hub virtual network and push logs to the Log Analytics Workspace.
 
 This add-on module uses Terraform to deploy an Encrypted Transport system that supports two modes:  
 
@@ -302,7 +302,7 @@ If you need additional subnets, you can add them to the `dmz_vnet_subnets` varia
 
 ### Additional DMZ Spoke Resource Parameters
 
-For detailed information about the DMZ networking variables, please see the [Azure NoOps DMZ Spoke Overlay Module](https://registry.terraform.io/modules/azurenoops/overlays-dmz-spoke/azurerm/latest) in the Terrform Registry or the [Azure DMZ Spoke Overlay Terraform Code - Readme](https://github.com/azurenoops/terraform-azurerm-overlays-dmz-spoke/blob/main/README.md) on GitHub.
+For detailed information about the DMZ networking variables, please see the [Azure NoOps DMZ Spoke Overlay Module](https://registry.terraform.io/modules/azurenoops/overlays-dmz-spoke/azurerm/latest) in the Terrform Registry or the [Azure DMZ Spoke Overlay Terraform Code - Readme](https://github.com/POps-Rox/tf-az-overlays-dmz-spoke/blob/main/README.md) on GitHub.
 
 ## OpenVPN Server Parameters
 
