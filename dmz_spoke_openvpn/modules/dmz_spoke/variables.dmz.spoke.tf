@@ -145,25 +145,25 @@ variable "hub_resource_group_name" {
   default     = null
 }
 
-variable "hub_virtual_network_name"{ 
+variable "hub_virtual_network_name" {
   description = "The name of the hub virtual network."
   type        = string
   default     = null
 }
 
-variable "hub_firewall_name"{
+variable "hub_firewall_name" {
   description = "The name of the hub firewall."
   type        = string
   default     = null
 }
 
-variable "hub_log_analytics_workspace_resource_group_name"{
+variable "hub_log_analytics_workspace_resource_group_name" {
   description = "The name of the hub log analytics workspace resource group."
   type        = string
   default     = null
 }
 
-variable "hub_log_analytics_workspace_name"{
+variable "hub_log_analytics_workspace_name" {
   description = "The name of the hub log analytics workspace."
   type        = string
   default     = null

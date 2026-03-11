@@ -13,10 +13,10 @@ resource "azurerm_public_ip" "ovpn-server-vm-pip" {
 
 
 resource "azurerm_network_interface" "ovpn-server-vm-nic-untrusted" {
-  name                 = data.azurenoopsutils_resource_name.ovpn-server-vm-nic-untrusted.result
-  location             = module.mod_azure_region_lookup.location_cli
-  resource_group_name  = var.openvpn_server_vm_resource_group_name
-  enable_ip_forwarding = true
+  name                          = data.azurenoopsutils_resource_name.ovpn-server-vm-nic-untrusted.result
+  location                      = module.mod_azure_region_lookup.location_cli
+  resource_group_name           = var.openvpn_server_vm_resource_group_name
+  enable_ip_forwarding          = true
   enable_accelerated_networking = true
 
   ip_configuration {
@@ -29,12 +29,12 @@ resource "azurerm_network_interface" "ovpn-server-vm-nic-untrusted" {
 }
 
 resource "azurerm_network_interface" "ovpn-server-vm-nic-trusted" {
-  name                 = data.azurenoopsutils_resource_name.ovpn-server-vm-nic-trusted.result
-  location             = module.mod_azure_region_lookup.location_cli
-  resource_group_name  = var.openvpn_server_vm_resource_group_name
-  enable_ip_forwarding = true
+  name                          = data.azurenoopsutils_resource_name.ovpn-server-vm-nic-trusted.result
+  location                      = module.mod_azure_region_lookup.location_cli
+  resource_group_name           = var.openvpn_server_vm_resource_group_name
+  enable_ip_forwarding          = true
   enable_accelerated_networking = true
-  
+
   ip_configuration {
     name                          = "ovpn-server-vm-nic-trusted-ipconfig"
     subnet_id                     = data.azurerm_subnet.trusted.id

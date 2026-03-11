@@ -68,12 +68,12 @@ variable "dmz_resource_group_name" {
   type        = string
 }
 
-variable "dmz_log_analytics_workspace_name"{
+variable "dmz_log_analytics_workspace_name" {
   description = "The name of the DMZ Log Analytics Workspace"
   type        = string
 }
 
-variable "dmz_log_analytics_workspace_resource_group_name"{
+variable "dmz_log_analytics_workspace_resource_group_name" {
   description = "The name of the DMZ Log Analytics Workspace Resource Group"
   type        = string
 }
