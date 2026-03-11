@@ -2,7 +2,7 @@
 ## Key Vault Configuration  ###
 ###############################
 module "dmz_keyvault" {
-  source  = "azurenoops/overlays-key-vault/azurerm"
+  source  = "github.com/POps-Rox/tf-az-overlays-keyvault"
   version = "~> 1.0"
 
   depends_on = [

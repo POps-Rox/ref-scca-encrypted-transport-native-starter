@@ -1,5 +1,5 @@
 module "mod_rg" {
-  source  = "azurenoops/overlays-resource-group/azurerm"
+  source  = "github.com/POps-Rox/tf-az-overlays-resourcegroup"
   version = "~> 1.0"
 
   org_name                = var.required.org_name

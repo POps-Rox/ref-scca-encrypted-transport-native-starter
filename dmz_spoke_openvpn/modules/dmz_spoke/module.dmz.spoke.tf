@@ -19,7 +19,7 @@ AUTHOR/S: sstjean
 
 module "mod_dmz_spoke" {
   providers = { azurerm.hub_network = azurerm.hub }
-  source    = "azurenoops/overlays-dmz-spoke/azurerm"
+  source    = "github.com/POps-Rox/tf-az-overlays-dmzspoke"
   version   = "~> 3.0"
 
   # By default, this module will create a resource group. 
