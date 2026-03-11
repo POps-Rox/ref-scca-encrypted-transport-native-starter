@@ -7,17 +7,17 @@ variable "openvpn_server_vm_resource_group_name" {
 variable "openvpn_server_vm_subnet_name" {
   description = "The name of the subnet to deploy the OpenVPN Server VM into."
   type        = string
-  default     = null  
+  default     = null
 }
 
-variable "openvpn_untrusted_subnet_name"{
+variable "openvpn_untrusted_subnet_name" {
   description = "The name of the subnet on the Internet-facing side of the OpenVPN server"
   type        = string
   default     = null
 }
 
 
-variable "openvpn_trusted_subnet_name"{
+variable "openvpn_trusted_subnet_name" {
   description = "The name of the subnet on the firewall-facing side of the OpenVPN server"
   type        = string
   default     = null
@@ -59,14 +59,14 @@ variable "openvpn_server_vm_ssh_public_key_path" {
   description = "The SSH public key to use for the OpenVPN Server."
   type        = string
   default     = ""
-  sensitive = true
+  sensitive   = true
 }
 
 variable "openvpn_server_vm_ssh_private_key_path" {
   description = "The SSH private key to use for the OpenVPN Server."
   type        = string
   default     = ""
-  sensitive = true
+  sensitive   = true
 }
 
 variable "openvpn_server_vm_name" {
@@ -93,7 +93,7 @@ variable "openvpn_server_image_sku" {
   default     = "gen2"
 }
 
-variable "openvpn_client_address_prefix"{
+variable "openvpn_client_address_prefix" {
   description = "The address prefix to use for the OpenVPN clients."
   type        = string
 }

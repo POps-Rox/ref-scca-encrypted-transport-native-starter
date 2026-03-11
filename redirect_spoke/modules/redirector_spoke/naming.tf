@@ -24,7 +24,7 @@ data "azurenoopsutils_resource_name" "vnet" {
   separator     = "-"
 }
 
-  data "azurenoopsutils_resource_name" "snet" {
+data "azurenoopsutils_resource_name" "snet" {
   for_each      = var.redirector_spoke_subnets
   name          = var.workload_name
   resource_type = "azurerm_subnet"
@@ -45,7 +45,7 @@ data "azurenoopsutils_resource_name" "nsg" {
   use_slug      = var.use_naming
   clean_input   = true
   separator     = "-"
-}  
+}
 
 data "azurenoopsutils_resource_name" "fw-pip" {
   name          = var.workload_name
