@@ -1,5 +1,5 @@
 module "mod_rg" {
-  source  = "github.com/POps-Rox/tf-az-overlays-resourcegroup"
+  source = "github.com/POps-Rox/tf-az-overlays-resourcegroup"
 
   org_name                = var.required.org_name
   environment             = var.required.deploy_environment
