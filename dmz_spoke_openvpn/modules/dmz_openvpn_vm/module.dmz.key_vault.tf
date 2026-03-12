@@ -2,7 +2,7 @@
 ## Key Vault Configuration  ###
 ###############################
 module "dmz_keyvault" {
-  source  = "github.com/POps-Rox/tf-az-overlays-keyvault"
+  source = "github.com/POps-Rox/tf-az-overlays-keyvault"
 
   depends_on = [
     azurerm_private_dns_zone.dns_zone,
