@@ -18,7 +18,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~>3.36"
+      version = "~> 3.116"
 
     }
     azuread = {
@@ -31,7 +31,7 @@ terraform {
     }
   }
 
-  required_version = ">= 1.3"
+  required_version = ">= 1.9"
 
   /*  backend "azurerm" {
     resource_group_name  = "afmpe-network-artifacts-rg"
