@@ -4,7 +4,7 @@
 ##
 #############################################
 
-data "azurenoopsutils_resource_name" "ovpn_server_vm" {
+data "popsrox_utils_resource_name" "ovpn_server_vm" {
   name          = "${var.workload_name}-server"
   resource_type = "azurerm_linux_virtual_machine"
   prefixes      = [var.required.org_name, var.use_location_short_name ? module.mod_azure_region_lookup.location_short : module.mod_azure_region_lookup.location_cli]
@@ -14,7 +14,7 @@ data "azurenoopsutils_resource_name" "ovpn_server_vm" {
   separator     = "-"
 }
 
-data "azurenoopsutils_resource_name" "ovpn-server-vm-nic-untrusted" {
+data "popsrox_utils_resource_name" "ovpn-server-vm-nic-untrusted" {
   name          = "${var.workload_name}-untrusted"
   resource_type = "azurerm_network_interface"
   prefixes      = [var.required.org_name, var.use_location_short_name ? module.mod_azure_region_lookup.location_short : module.mod_azure_region_lookup.location_cli]
@@ -24,7 +24,7 @@ data "azurenoopsutils_resource_name" "ovpn-server-vm-nic-untrusted" {
   separator     = "-"
 }
 
-data "azurenoopsutils_resource_name" "ovpn-server-vm-nic-trusted" {
+data "popsrox_utils_resource_name" "ovpn-server-vm-nic-trusted" {
   name          = "${var.workload_name}-trusted"
   resource_type = "azurerm_network_interface"
   prefixes      = [var.required.org_name, var.use_location_short_name ? module.mod_azure_region_lookup.location_short : module.mod_azure_region_lookup.location_cli]
@@ -35,7 +35,7 @@ data "azurenoopsutils_resource_name" "ovpn-server-vm-nic-trusted" {
 }
 
 
-data "azurenoopsutils_resource_name" "ovpn-server-vm-pip" {
+data "popsrox_utils_resource_name" "ovpn-server-vm-pip" {
   name          = var.workload_name
   resource_type = "azurerm_public_ip"
   prefixes      = [var.required.org_name, var.use_location_short_name ? module.mod_azure_region_lookup.location_short : module.mod_azure_region_lookup.location_cli]

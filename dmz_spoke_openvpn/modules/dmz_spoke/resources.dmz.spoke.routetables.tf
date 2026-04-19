@@ -7,7 +7,7 @@ SUMMARY: Creates the appropriate route tables for the trusted and untrusted subn
 */
 
 resource "azurerm_route_table" "untrusted_subnet_route_table" {
-  name                          = data.azurenoopsutils_resource_name.untrusted_subnet_route_table.result
+  name                          = data.popsrox_utils_resource_name.untrusted_subnet_route_table.result
   location                      = module.mod_azure_region_lookup.location_cli
   resource_group_name           = module.mod_dmz_spoke.resource_group_name
   disable_bgp_route_propagation = true
@@ -21,7 +21,7 @@ resource "azurerm_route_table" "untrusted_subnet_route_table" {
 
 
 resource "azurerm_route_table" "trusted_subnet_route_table" {
-  name                          = data.azurenoopsutils_resource_name.trusted_subnet_route_table.result
+  name                          = data.popsrox_utils_resource_name.trusted_subnet_route_table.result
   location                      = module.mod_azure_region_lookup.location_cli
   resource_group_name           = module.mod_dmz_spoke.resource_group_name
   disable_bgp_route_propagation = true

@@ -16,7 +16,7 @@ AUTHOR/S: sstjean
 
 resource "azurerm_subnet" "redirector_spoke_snets" {
   for_each             = var.redirector_spoke_subnets
-  name                 = data.azurenoopsutils_resource_name.snet[each.key].result
+  name                 = data.popsrox_utils_resource_name.snet[each.key].result
   resource_group_name  = module.mod_rg.resource_group_name
   virtual_network_name = azurerm_virtual_network.redirector-vnet.name
   address_prefixes     = each.value.address_prefixes

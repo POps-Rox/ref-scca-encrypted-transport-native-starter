@@ -5,7 +5,7 @@
 SUMMARY: Generate the names for the route tables for the DMZ subnets
 */
 
-data "azurenoopsutils_resource_name" "untrusted_subnet_route_table" {
+data "popsrox_utils_resource_name" "untrusted_subnet_route_table" {
   name          = "${var.wl_name}-untrusted-subnet"
   resource_type = "azurerm_route_table"
   prefixes      = [var.required.org_name, var.use_location_short_name ? module.mod_azure_region_lookup.location_short : module.mod_azure_region_lookup.location_cli]
@@ -15,7 +15,7 @@ data "azurenoopsutils_resource_name" "untrusted_subnet_route_table" {
   separator     = "-"
 }
 
-data "azurenoopsutils_resource_name" "trusted_subnet_route_table" {
+data "popsrox_utils_resource_name" "trusted_subnet_route_table" {
   name          = "${var.wl_name}-trusted-subnet"
   resource_type = "azurerm_route_table"
   prefixes      = [var.required.org_name, var.use_location_short_name ? module.mod_azure_region_lookup.location_short : module.mod_azure_region_lookup.location_cli]

@@ -1,7 +1,7 @@
 terraform {
   required_providers {
-    azurenoopsutils = {
-      source  = "POps-Rox/azurenoopsutils"
+    popsrox-utils = {
+      source  = "POps-Rox/popsrox-utils"
       version = "1.0.4"
     }
   }

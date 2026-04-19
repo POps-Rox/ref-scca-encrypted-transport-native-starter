@@ -6,7 +6,7 @@ resource "azurerm_subnet" "firewall_subnet" {
 }
 
 resource "azurerm_public_ip" "redirect_firewall_public_ip" {
-  name                = data.azurenoopsutils_resource_name.fw-pip.result
+  name                = data.popsrox_utils_resource_name.fw-pip.result
   location            = module.mod_azure_region_lookup.location_cli
   resource_group_name = module.mod_rg.resource_group_name
   allocation_method   = "Static"
@@ -16,7 +16,7 @@ resource "azurerm_public_ip" "redirect_firewall_public_ip" {
 
 resource "azurerm_firewall" "redirect_firewall" {
   depends_on          = [azurerm_firewall_policy.redirect_policy]
-  name                = data.azurenoopsutils_resource_name.fw.result
+  name                = data.popsrox_utils_resource_name.fw.result
   location            = module.mod_azure_region_lookup.location_cli
   resource_group_name = module.mod_rg.resource_group_name
   sku_name            = "AZFW_VNet"
