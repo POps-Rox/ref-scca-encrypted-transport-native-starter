@@ -4,7 +4,7 @@
 #------------------------------------------------------------
 # Azure NoOps Naming - This should be used on all resource naming
 #------------------------------------------------------------
-data "popsrox_utils_resource_name" "rg" {
+data "popsrox_resource_name" "rg" {
   name          = var.workload_name
   resource_type = "azurerm_resource_group"
   prefixes      = [var.required.org_name, var.use_location_short_name ? module.mod_azure_region_lookup.location_short : module.mod_azure_region_lookup.location_cli]
@@ -14,7 +14,7 @@ data "popsrox_utils_resource_name" "rg" {
   separator     = "-"
 }
 
-data "popsrox_utils_resource_name" "vnet" {
+data "popsrox_resource_name" "vnet" {
   name          = var.workload_name
   resource_type = "azurerm_virtual_network"
   prefixes      = [var.required.org_name, var.use_location_short_name ? module.mod_azure_region_lookup.location_short : module.mod_azure_region_lookup.location_cli]
@@ -24,7 +24,7 @@ data "popsrox_utils_resource_name" "vnet" {
   separator     = "-"
 }
 
-data "popsrox_utils_resource_name" "snet" {
+data "popsrox_resource_name" "snet" {
   for_each      = var.redirector_spoke_subnets
   name          = var.workload_name
   resource_type = "azurerm_subnet"
@@ -36,7 +36,7 @@ data "popsrox_utils_resource_name" "snet" {
 }
 
 
-data "popsrox_utils_resource_name" "nsg" {
+data "popsrox_resource_name" "nsg" {
   for_each      = var.redirector_spoke_subnets
   name          = var.workload_name
   resource_type = "azurerm_network_security_group"
@@ -47,7 +47,7 @@ data "popsrox_utils_resource_name" "nsg" {
   separator     = "-"
 }
 
-data "popsrox_utils_resource_name" "fw-pip" {
+data "popsrox_resource_name" "fw-pip" {
   name          = var.workload_name
   resource_type = "azurerm_public_ip"
   prefixes      = [var.required.org_name, var.use_location_short_name ? module.mod_azure_region_lookup.location_short : module.mod_azure_region_lookup.location_cli]
@@ -58,7 +58,7 @@ data "popsrox_utils_resource_name" "fw-pip" {
 }
 
 
-data "popsrox_utils_resource_name" "fw-mgmt-pip" {
+data "popsrox_resource_name" "fw-mgmt-pip" {
   name          = "${var.workload_name}-fwmgmt"
   resource_type = "azurerm_public_ip"
   prefixes      = [var.required.org_name, var.use_location_short_name ? module.mod_azure_region_lookup.location_short : module.mod_azure_region_lookup.location_cli]
@@ -67,7 +67,7 @@ data "popsrox_utils_resource_name" "fw-mgmt-pip" {
   clean_input   = true
   separator     = "-"
 }
-data "popsrox_utils_resource_name" "fw" {
+data "popsrox_resource_name" "fw" {
   name          = var.workload_name
   resource_type = "azurerm_firewall"
   prefixes      = [var.required.org_name, var.use_location_short_name ? module.mod_azure_region_lookup.location_short : module.mod_azure_region_lookup.location_cli]

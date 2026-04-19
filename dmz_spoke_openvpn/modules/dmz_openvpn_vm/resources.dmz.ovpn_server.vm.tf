@@ -5,7 +5,7 @@
 ####################################
 
 resource "azurerm_public_ip" "ovpn-server-vm-pip" {
-  name                = data.popsrox_utils_resource_name.ovpn-server-vm-pip.result
+  name                = data.popsrox_resource_name.ovpn-server-vm-pip.result
   location            = module.mod_azure_region_lookup.location_cli
   resource_group_name = var.openvpn_server_vm_resource_group_name
   allocation_method   = "Static"
@@ -13,7 +13,7 @@ resource "azurerm_public_ip" "ovpn-server-vm-pip" {
 
 
 resource "azurerm_network_interface" "ovpn-server-vm-nic-untrusted" {
-  name                          = data.popsrox_utils_resource_name.ovpn-server-vm-nic-untrusted.result
+  name                          = data.popsrox_resource_name.ovpn-server-vm-nic-untrusted.result
   location                      = module.mod_azure_region_lookup.location_cli
   resource_group_name           = var.openvpn_server_vm_resource_group_name
   enable_ip_forwarding          = true
@@ -29,7 +29,7 @@ resource "azurerm_network_interface" "ovpn-server-vm-nic-untrusted" {
 }
 
 resource "azurerm_network_interface" "ovpn-server-vm-nic-trusted" {
-  name                          = data.popsrox_utils_resource_name.ovpn-server-vm-nic-trusted.result
+  name                          = data.popsrox_resource_name.ovpn-server-vm-nic-trusted.result
   location                      = module.mod_azure_region_lookup.location_cli
   resource_group_name           = var.openvpn_server_vm_resource_group_name
   enable_ip_forwarding          = true
@@ -45,7 +45,7 @@ resource "azurerm_network_interface" "ovpn-server-vm-nic-trusted" {
 
 resource "azurerm_linux_virtual_machine" "ovpn-server-vm" {
   depends_on          = [module.dmz_keyvault]
-  name                = data.popsrox_utils_resource_name.ovpn_server_vm.result
+  name                = data.popsrox_resource_name.ovpn_server_vm.result
   location            = module.mod_azure_region_lookup.location_cli
   resource_group_name = var.openvpn_server_vm_resource_group_name
   computer_name       = var.openvpn_server_vm_name

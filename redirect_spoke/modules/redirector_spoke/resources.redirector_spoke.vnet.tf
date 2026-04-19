@@ -15,7 +15,7 @@ AUTHOR/S: sstjean
 ###############################################
 
 resource "azurerm_virtual_network" "redirector-vnet" {
-  name                = data.popsrox_utils_resource_name.vnet.result
+  name                = data.popsrox_resource_name.vnet.result
   location            = module.mod_azure_region_lookup.location_full_name
   resource_group_name = module.mod_rg.resource_group_name
   address_space       = var.virtual_network_address_space
