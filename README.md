@@ -8,8 +8,8 @@
 
 # Encrypted Transport for SCCA-Compliant Enclave Reference Add-on Module
 
-![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/azurenoops/ref-scca-encrypted-transport-native-starter)
-[![MIT License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE) [![TF Registry](https://img.shields.io/badge/terraform-registry-blue.svg)](https://registry.terraform.io/modules/azurenoops/overlays-dmz-spoke/azurerm/)
+![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/POps-Rox/ref-scca-encrypted-transport-native-starter)
+[![MIT License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE) [![TF Registry](https://img.shields.io/badge/terraform-registry-blue.svg)](https://registry.terraform.io/modules/POps-Rox/overlays-dmz-spoke/azurerm/)
 
 ## Overview
 
@@ -302,7 +302,7 @@ If you need additional subnets, you can add them to the `dmz_vnet_subnets` varia
 
 ### Additional DMZ Spoke Resource Parameters
 
-For detailed information about the DMZ networking variables, please see the [Azure NoOps DMZ Spoke Overlay Module](https://registry.terraform.io/modules/azurenoops/overlays-dmz-spoke/azurerm/latest) in the Terrform Registry or the [Azure DMZ Spoke Overlay Terraform Code - Readme](https://github.com/POps-Rox/tf-az-overlays-dmz-spoke/blob/main/README.md) on GitHub.
+For detailed information about the DMZ networking variables, please see the [Azure NoOps DMZ Spoke Overlay Module](https://registry.terraform.io/modules/POps-Rox/overlays-dmz-spoke/azurerm/latest) in the Terrform Registry or the [Azure DMZ Spoke Overlay Terraform Code - Readme](https://github.com/POps-Rox/tf-az-overlays-dmz-spoke/blob/main/README.md) on GitHub.
 
 ## OpenVPN Server Parameters
 
@@ -328,5 +328,5 @@ Parameter name | Default Value | Description
 ## Other resources
 
 * [Hub-spoke network topology in Azure](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/hub-spoke)
-* [Microsoft Federal - Azure NoOps Terraform Registry](https://registry.terraform.io/namespaces/azurenoops)
+* [Microsoft Federal - Azure NoOps Terraform Registry](https://registry.terraform.io/namespaces/POps-Rox)
 * [Terraform AzureRM Provider Documentation](https://www.terraform.io/docs/providers/azurerm/index.html)
