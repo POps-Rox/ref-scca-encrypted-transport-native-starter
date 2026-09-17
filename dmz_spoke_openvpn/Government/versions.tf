@@ -25,8 +25,8 @@ terraform {
       source  = "hashicorp/azuread"
       version = "~> 2.15"
     }
-    popsrox-utils = {
-      source  = "POps-Rox/popsrox-utils"
+    popsrox = {
+      source  = "POps-Rox/azutils"
       version = "~> 1.0"
     }
   }
